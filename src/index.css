@@ -1,0 +1,146 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; 
+}
+
+.movie-list {
+  list-style-type: none; 
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.movie-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-item:hover,
+.movie-item.active {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.movie-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.movie-details h3 {
+  font-size: 22px;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.movie-details p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px; 
+}
+
+nav ul li {
+  list-style-type: none; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #2C3E50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1A252F;
+}
+
+.movie-search input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.movie-search button {
+  padding: 10px 15px;
+  background-color: #2C3E50;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-search button:hover {
+  background-color: #1A252F;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .header h2 {
+    font-size: 26px;
+  }
+
+  .movie-item {
+    padding: 15px;
+  }
+
+  .movie-details h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 15px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .movie-list {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-item {
+    padding: 10px;
+  }
+
+  .movie-details h3 {
+    font-size: 18px;
+  }
+}
